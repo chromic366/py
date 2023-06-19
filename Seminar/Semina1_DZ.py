@@ -33,12 +33,24 @@
 # программу, которая проверяет счастливость билета
 
 
-num = input("Введите номер билета: ")
+# num = input("Введите номер билета: ")
+#
+# first_ticket = (int(num[0]) + int(num[1]) + int(num[2]))
+# second_ticket = (int(num[3]) + int(num[4]) + int(num[5]))
+#
+# if first_ticket == second_ticket:
+#     print("Ура!")
+# else:
+#     print("Нет")
 
-first_ticket = (int(num[0]) + int(num[1]) + int(num[2]))
-second_ticket = (int(num[3]) + int(num[4]) + int(num[5]))
 
-if first_ticket == second_ticket:
-    print("Ура!")
+# Требуется определить, можно ли от шоколадки размером n × m
+# долек отломить k долек, если разрешается сделать один разлом по
+# прямой между дольками (то есть разломить шоколадку на два
+# прямоугольника).
+
+m, n, k = int(input("Введите число m: ")), int(input("Введите число n: ")), int(input("Введите число k: "))
+if k % m == 0 or k % n == 0:
+    print('yes')
 else:
-    print("Нет")
+    print('no')
