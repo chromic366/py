@@ -76,30 +76,47 @@
 # в противном случае. # В случае, если хотя бы одно из введенных
 # чисел не лежит в диапазоне от 1 до 8, выведите строку "Ошибка!".
 
-king_v = int(input())
-king_g = int(input())
+# king_v = int(input())
+# king_g = int(input())
+#
+# next_turn_v = int(input())
+# next_turn_g = int(input())
+#
+# def chekInput(king_v, king_g, next_turn_v, next_turn_g):
+#     if(king_v in range(1, 9) and
+#         king_v in range(1, 9) and
+#         next_turn_v in range(1, 9) and
+#         next_turn_g in range(1, 9)):
+#         return True
+#     else:
+#         return False
+#
+# def cheas(king_v, king_g, next_turn_v, next_turn_g):
+#
+#     if(chekInput(king_v, king_g, next_turn_v, next_turn_g)):
+#         if(abs(next_turn_v - king_v) <= 1 and abs(next_turn_g - king_g) <= 1):
+#             print("yes")
+#         else:
+#             print("no")
+#
+#     else:
+#         print("no")
+#
+# cheas(king_v, king_g, next_turn_v, next_turn_g)
 
-next_turn_v = int(input())
-next_turn_g = int(input())
 
-def chekInput(king_v, king_g, next_turn_v, next_turn_g):
-    if(king_v in range(1, 9) and
-        king_v in range(1, 9) and
-        next_turn_v in range(1, 9) and
-        next_turn_g in range(1, 9)):
-        return True
-    else:
-        return False
+# Треугольник существует только тогда, когда сумма любых двух
+# его сторон больше третьей. Дано a, b, c - стороны
+# предполагаемого треугольника. Требуется сравнить длину
+# каждого отрезка-стороны с суммой двух других. Если хотя
+# бы в одном случае отрезок окажется больше суммы двух других,
+# то треугольника с такими сторонами не существует
 
-def cheas(king_v, king_g, next_turn_v, next_turn_g):
+a = float(input("Введите длину стороны a: "))
+b = float(input("Введите длину стороны b: "))
+c = float(input("Введите длину стороны c: "))
 
-    if(chekInput(king_v, king_g, next_turn_v, next_turn_g)):
-        if(abs(next_turn_v - king_v) <= 1 and abs(next_turn_g - king_g) <= 1):
-            print("yes")
-        else:
-            print("no")
-
-    else:
-        print("no")
-
-cheas(king_v, king_g, next_turn_v, next_turn_g)
+if a + b > c and a + c > b and b + c > a:
+    print("Треугольник существует")
+else:
+    print("Треугольник не существует")
