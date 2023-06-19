@@ -58,9 +58,48 @@
 # 100, а также если он кратен 400
 
 
-year = int(input())
+# year = int(input())
+#
+# if year % 4 == 0 and (year % 100 != 0 or year % 400 == 0):
+#     print("yes")
+# else:
+#     print("no")
 
-if year % 4 == 0 and (year % 100 != 0 or year % 400 == 0):
-    print("yes")
-else:
-    print("no")
+
+# Шахматный король ходит по горизонтали, вертикали и диагонали,
+# но только на 1 клетку. Даны две различные клетки шахматной доски,
+# определите, может ли  король попасть с первой клетки на вторую одним ходом.
+# Программа получает на вход четыре числа от 1 до 8 каждое, задающие
+# номер столбца и номер строки сначала для первой клетки,
+# потом для второй клетки. Программа должна вывести YES,
+# если из первой клетки ходом короля можно попасть во вторую или NO
+# в противном случае. # В случае, если хотя бы одно из введенных
+# чисел не лежит в диапазоне от 1 до 8, выведите строку "Ошибка!".
+
+king_v = int(input())
+king_g = int(input())
+
+next_turn_v = int(input())
+next_turn_g = int(input())
+
+def chekInput(king_v, king_g, next_turn_v, next_turn_g):
+    if(king_v in range(1, 9) and
+        king_v in range(1, 9) and
+        next_turn_v in range(1, 9) and
+        next_turn_g in range(1, 9)):
+        return True
+    else:
+        return False
+
+def cheas(king_v, king_g, next_turn_v, next_turn_g):
+
+    if(chekInput(king_v, king_g, next_turn_v, next_turn_g)):
+        if(abs(next_turn_v - king_v) <= 1 and abs(next_turn_g - king_g) <= 1):
+            print("yes")
+        else:
+            print("no")
+
+    else:
+        print("no")
+
+cheas(king_v, king_g, next_turn_v, next_turn_g)
