@@ -62,7 +62,7 @@ cur_plus = 0
 max_plus = 0
 for i in range(n):
     temp = randint(-40, 40)
-    print(temp)
+    print(temp, end=" ")
     if temp > 0:
         cur_plus += 1
     else:
@@ -73,4 +73,4 @@ for i in range(n):
 if cur_plus > max_plus:
    max_plus = cur_plus
 
-print(max_plus)
+print(f"\n{max_plus}")
