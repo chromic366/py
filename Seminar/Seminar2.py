@@ -3,12 +3,37 @@
 # чисел от 1 до N) 0! = 1 Решить задачу используя цикл
 # while
 
-n = int(input())
+# n = int(input())
+#
+# count = 1
+# fact = 1
+# while count <= n:
+#     fact = fact * count
+#     count += 1
+#
+# print(fact)
 
-count = 1
-fact = 1
-while count <= n:
-    fact = fact * count
+
+# Дано натуральное число A > 1. Определите, каким по
+# счету числом Фибоначчи оно является, то есть
+# выведите такое число n, что φ(n)=A. Если А не
+# является числом Фибоначчи, выведите число -1.
+
+
+a = int(input())
+
+n0 = 0
+n1 = 1
+n2 = n1 + n0
+count = 2
+
+while n2 < a:
+    n2 = n1 + n0
+    n0, n1 = n1, n2
     count += 1
+    if n2 == a:
+        print(count)
+        break
 
-print(fact)
+else:
+    print(-1)
