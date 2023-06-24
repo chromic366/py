@@ -4,7 +4,7 @@
 # пользоваться условной инструкцией if и циклами.
 
 # n = int(input())
-# m = int(input())
+# m = int(input())2
 #
 # print((m + n - 1) // n)
 
