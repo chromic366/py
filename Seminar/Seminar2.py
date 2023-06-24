@@ -88,19 +88,40 @@
 # число – это масса соответствующего арбуза
 
 
-from random import randint
+# from random import randint
+#
+# n = int(input())
+#
+# mass_water = randint(0, 20)
+# min_n = mass_water
+# max_n = mass_water
+#
+# for i in range(n -1):
+#     mass_water = randint(1, 20)
+#     print(mass_water)
+#     if mass_water > max_n:
+#         max_n = mass_water
+#     elif mass_water < min_n:
+#         min_n = mass_water
+# print(min_n, max_n)
 
-n = int(input())
+# Даны целые положительные числа A и B
+# Найти их наибольший общий делитель (НОД)
+# и наименьшее общее кратное (НОК)
+a = 28
+b = 14
+nod = 0
+nok = 0
 
-mass_water = randint(0, 20)
-min_n = mass_water
-max_n = mass_water
+flag = False
+for i in range(2, min(a, b)):
+    if a % i == 0 and b % i ==0:
+        nod = i
+        if flag:
+            continue
+        else:
+            nok = i
+            flag = True
 
-for i in range(n -1):
-    mass_water = randint(1, 20)
-    print(mass_water)
-    if mass_water > max_n:
-        max_n = mass_water
-    elif mass_water < min_n:
-        min_n = mass_water
-print(min_n, max_n)
+print(f"НОК = {nok}")
+print(f"НОД = {nod}")
