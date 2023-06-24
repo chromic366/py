@@ -56,21 +56,51 @@
 # диапазоне от –50 до 50
 
 
+# from random import randint
+# n = int(input())
+# cur_plus = 0
+# max_plus = 0
+# for i in range(n):
+#     temp = randint(-40, 40)
+#     print(temp, end=" ")
+#     if temp > 0:
+#         cur_plus += 1
+#     else:
+#         if cur_plus > max_plus:
+#             max_plus = cur_plus
+#             cur_plus = 0
+#
+# if cur_plus > max_plus:
+#    max_plus = cur_plus
+#
+# print(f"\n{max_plus}")
+
+
+# Иван Васильевич пришел на рынок и решил
+# купить два арбуза: один для себя, а другой для тещи.
+# Понятно, что для себя нужно выбрать арбуз
+# потяжелей, а для тещи полегче. Но вот незадача:
+# арбузов слишком много и он не знает как же выбрать
+# самый легкий и самый тяжелый арбуз? Помогите ему!
+# Пользователь вводит одно число N – количество
+# арбузов. Вторая строка содержит N чисел,
+# записанных на новой строчке каждое. Здесь каждое
+# число – это масса соответствующего арбуза
+
+
 from random import randint
+
 n = int(input())
-cur_plus = 0
-max_plus = 0
-for i in range(n):
-    temp = randint(-40, 40)
-    print(temp, end=" ")
-    if temp > 0:
-        cur_plus += 1
-    else:
-        if cur_plus > max_plus:
-            max_plus = cur_plus
-            cur_plus = 0
 
-if cur_plus > max_plus:
-   max_plus = cur_plus
+mass_water = randint(0, 20)
+min_n = mass_water
+max_n = mass_water
 
-print(f"\n{max_plus}")
+for i in range(n -1):
+    mass_water = randint(1, 20)
+    print(mass_water)
+    if mass_water > max_n:
+        max_n = mass_water
+    elif mass_water < min_n:
+        min_n = mass_water
+print(min_n, max_n)
