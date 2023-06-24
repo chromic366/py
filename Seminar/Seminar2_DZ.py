@@ -5,27 +5,44 @@
 # количество монет, которые нужно перевернуть.
 
 
-import random
+# import random
+#
+# from random import randint
+#
+# amount_coin = int(input('введите количество монет: '))
+#
+# m = 0
+# k = 0
+# coins = [0, 1]
+# for i in range(amount_coin):
+#     random.shuffle(coins)
+#     print(f'все монеты{coins}')
+#     if int(coins[0]) == 0:
+#         k += 1
+#     if int(coins[0]) == 1:
+#         m += 1
+# print(f'всего монет {m, k}')
+#
+# if m > k:
+#     ans = k
+# else:
+#     ans = m
+#
+# print(f"минимальное количество монет, которые нужно перевернуть{ans}")
 
-from random import randint
 
-amount_coin = int(input('введите количество монет: '))
+# Петя и Катя – брат и сестра. Петя – студент, а Катя –
+# школьница. Петя помогает Кате по математике. Он задумывает два
+# натуральных числа X и Y (X,Y≤1000), а Катя должна их отгадать. Для
+# этого Петя делает две подсказки. Он называет сумму этих чисел S и их
+# произведение P. Помогите Кате отгадать задуманные Петей числа
 
-m = 0
-k = 0
-coins = [0, 1]
-for i in range(amount_coin):
-    random.shuffle(coins)
-    print(f'все монеты{coins}')
-    if int(coins[0]) == 0:
-        k += 1
-    if int(coins[0]) == 1:
-        m += 1
-print(f'всего монет {m, k}')
 
-if m > k:
-    ans = k
-else:
-    ans = m
+s = int(input('Введите сумму чисел: '))
+p = int(input('Введите произведение чисел: '))
 
-print(f"минимальное количество монет, которые нужно перевернуть{ans}")
+x = (s-int((s**2-4*p)**0.5))//2
+y = s - x
+if x >= 1000 and y >= 1000:
+    print('Петя обманул')
+print(f'числа задуманные Петей{x, y}')
